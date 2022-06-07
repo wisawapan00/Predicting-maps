@@ -2,8 +2,9 @@ import torch
 from torchvision.utils import save_image
 from tqdm import tqdm
 import Config
-import Augmentation
-import Dataset
+from Augmentation import train_augmentation, val_augmentation
+from Generator import Generator
+from Dataset import Map
 
 def save_images(gen, valloader, save_image_path, device):
     gen.eval()

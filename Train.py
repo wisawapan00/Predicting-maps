@@ -1,3 +1,4 @@
+import imp
 import time
 import torch
 import multiprocessing as mp
@@ -9,8 +10,11 @@ from torch.utils.data import RandomSampler
 from torch.cuda.amp import GradScaler, autocast
 from tqdm import tqdm
 import Config
-import Augmentation
-import Dataset
+from Augmentation import train_augmentation, val_augmentation
+from Discriminator import Discriminator
+from Generator import Generator
+from Dataset import Map
+from Utils import save_images, save_checkpoint
 
 def main():
     start = time.time()
