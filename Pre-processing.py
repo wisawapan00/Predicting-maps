@@ -4,8 +4,8 @@ from PIL import Image
 import cv2
 
 
-root_dir = "/content/drive/MyDrive/GANs/DATASETS/maps/train/"
-folder = "/content/drive/MyDrive/GANs/DATASETS/maps"
+root_dir = "DATASETS/maps/train/"
+folder = "DATASETS/maps"
 list_files = os.listdir(root_dir)
 
 for img_file in list_files:
